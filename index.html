@@ -104,9 +104,9 @@
     <!-- Mute/Unmute Audio Button -->
     <button id="audio-btn">🔇</button>
 
-    <!-- AR Scene Container using your compiled multi-target targets.mind file -->
+<!-- AR Scene Container with tightened anti-jitter smoothing -->
     <a-scene 
-      mindar-image="imageTargetSrc: targets.mind; maxTrack: 1;" 
+      mindar-image="imageTargetSrc: targets.mind; maxTrack: 1; filterMinCF: 0.0001; filterBeta: 0.001;" 
       color-space="sRGB" 
       renderer="colorManagement: true, physicallyCorrectLights" 
       vr-mode-ui="enabled: false" 
